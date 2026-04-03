@@ -88,6 +88,13 @@ p { font-size: 20px; }
 
 .close .rightSideMenu { animation: exitBackground 0.3s forwards ease-in-out; }
 
+.noscroll {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow-y: scroll;
+}
+
 .header .sideMenu .leftSideMenu {
     width: 450px;
     height: auto;
@@ -108,13 +115,6 @@ p { font-size: 20px; }
     padding: 0 14px;
 }
 
-.header .sideMenu .exitButtonDiv button {
-    width: 40px;
-    height: 40px;
-    background-color: var(--cor-texto-preto);
-    margin-left: 8px;
-}
-
 .header .sideMenu .exitButtonDiv div {
     background: none;
     padding: 0;
@@ -133,7 +133,13 @@ p { font-size: 20px; }
     width: 40px;
     height: 40px;
     padding: 8px;
+
+    transition: background-color 0.3s ease-out, filter 0.3s ease-out;
 }
+
+.header .sideMenu .exitButtonDiv button:hover { background-color: var(--cor-texto-branco); }
+
+.header .sideMenu .exitButtonDiv button:hover img { filter: invert(1); }
 
 .header .sideMenu .exitButtonDiv img { width: 80px; }
 
@@ -220,7 +226,7 @@ p { font-size: 20px; }
 
 .header a, #mainSection a { text-decoration: none; color: inherit; }
 
-.header a:not(.doarBtn):hover { text-decoration: underline; }
+.header a:not(.doarBtn):hover { text-decoration: underline; text-underline-offset: 5px; }
 
 .header .rightSide {
     margin-left: auto;
@@ -240,8 +246,14 @@ p { font-size: 20px; }
     border-radius: 14px;
     font-weight: bold;
 
+    align-content: center;
+
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+
     cursor: pointer;
 }
+
+.header .doarBtn:hover { color: var(--cor-pagina-laranja); background-color: var(--cor-texto-branco); }
 
 .header .userBtn {
     all: unset;
@@ -259,12 +271,60 @@ p { font-size: 20px; }
     border-radius: 50%;
 
     box-sizing: border-box;
+
+    transition: background 0.3s ease-out, filter 0.3s ease-out;
     cursor: pointer;
 }
+
+.header .userBtn:hover { background: var(--cor-texto-branco); }
+
+.header .userBtn:hover img { filter: invert(1); }
 
 .header .userBtn img { width: 100%; }
 
 .header .burgerMenu { display: none; }
+
+.header .userModal {
+    position: fixed;
+
+    background-color: rgb(17 17 17 / 1);
+    backdrop-filter: blur(8px);
+    right: 2.5%;
+    top: 100px;
+
+    border: 2px solid var(--cor-pagina-branco);
+    border-radius: 14px;
+
+    display: none;
+
+    z-index: 101;
+}
+
+.header .userModal.activeModal { display: block; }
+
+.header .userModal ul { list-style: none; }
+
+.header .userModal li {
+    padding: 8px 10px;
+    font-size: 18px;
+    color: var(--cor-texto-branco);
+}
+
+.header .userModal a {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+}
+
+.header .userModal img {
+    width: 34px;
+}
+
+.header .userModal hr {
+    border: none;
+    height: 1px;
+    background-color: var(--cor-pagina-branco);
+}
 
 /* Seção 1 - Principal */
 
@@ -277,7 +337,7 @@ p { font-size: 20px; }
             rgb(30 58 138 / 0.65) 10%,
             rgb(255 106 0 / 0.15) 100%
         ),
-        url("../assets/images/HomeMainImg.png");
+        url("../assets/images/HomeMainImg.webp");
     background-position: center 40%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -312,6 +372,7 @@ p { font-size: 20px; }
     color: var(--cor-texto-branco);
     padding: 12px 18px;
     border-radius: 14px;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
 
     cursor: pointer;
 }
@@ -321,8 +382,11 @@ p { font-size: 20px; }
     text-transform: uppercase;
 }
 
+#mainSection .doarBtn:hover { background-color: var(--cor-texto-branco); color: var(--cor-pagina-laranja); }
+
 #mainSection .coletaBtn { background-color: #2563EB; }
 
+#mainSection .coletaBtn:hover { background-color: var(--cor-texto-branco); color: #2563EB; }
 
 /* Seção 2 - Sobre Nós */
 
@@ -550,9 +614,12 @@ p { font-size: 20px; }
     margin-top: auto;
 
     text-decoration: none;
+    transition: transform 0.3s ease-out;
 
     cursor: pointer;
 }
+
+#supportSection .supportBox a:hover { transform: scale(1.02); }
 
 #supportSection .doar a {
     background: linear-gradient(
@@ -668,6 +735,145 @@ p { font-size: 20px; }
 
 #realStoriesSection .content p span { font-weight: 600; }
 
+
+/* Seção 5 - Feedback dos Usuários */
+
+#feedbackSection {
+    position: relative;
+    padding: 120px 5%;
+}
+
+#feedbackSection .carouselWrapper {
+    position: relative;
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: 50px auto 50px;
+    grid-template-areas: "leftBtn container rightBtn" "indicators indicators indicators";
+
+    grid-gap: 14px;
+}
+
+#feedbackSection .carouselContainer {
+    position: relative;
+    grid-area: container;
+
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0px 24px rgb(17 17 17 / 0.2);
+    border-radius: 14px;
+    z-index: 1;
+}
+
+#feedbackSection .carouselContainer::before {
+    content: "";
+    position: absolute;
+
+    inset: 0;
+    background: linear-gradient(
+        45deg,
+        rgb(255 122 0 / 0.7) 0%,
+        var(--cor-pagina-branco) 50%,
+        var(--cor-pagina-azul) 100%
+    );
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: -1;
+
+    border-radius: inherit;
+}
+
+#feedbackSection .carouselTrack {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+#feedbackSection .carouselBox {
+    min-width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-radius: 14px;
+    
+    padding: 30px;
+}
+
+#feedbackSection .carouselBox .userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+}
+
+#feedbackSection .carouselBox .userInfo img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 10px solid var(--cor-pagina-azul);
+    outline: 2px solid var(--cor-pagina-branco);
+    box-shadow: 0 0 20px rgb(17 17 17 / 0.5);
+}
+
+#feedbackSection .carouselBox .stars { display: flex; column-gap: 2px; }
+
+#feedbackSection .carouselBox .star {
+    width: 24px;
+    height: 24px;
+    fill: #ccc;
+    stroke: var(--cor-texto-branco);
+    stroke-width: 1.5;
+    stroke-linejoin: round;
+}
+
+#feedbackSection .carouselBox .star.activeStar { fill: #FFB400; }
+
+#feedbackSection .arrow {
+    position: absolute;
+
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+
+    cursor: pointer;
+}
+
+#feedbackSection .arrow:hover { opacity: 1; }
+
+#feedbackSection .arrow img { width: 100%; }
+
+#feedbackSection .arrow.left { grid-area: leftBtn; left: 0px; }
+
+#feedbackSection .arrow.right { grid-area: rightBtn; right: 0px; transform: translateY(-50%) rotate(180deg); }
+
+#feedbackSection .indicators {
+    grid-area: indicators;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+    column-gap: 8px;
+}
+
+#feedbackSection .indicators span {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(17 17 17 / 1);
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+#feedbackSection .indicators .active {
+    width: 36px;
+    opacity: 1;
+}
 
 /* Footer */
 
@@ -799,6 +1005,14 @@ p { font-size: 20px; }
 
     .header .navOptions, .header .rightSide .doarBtn, .header .rightSide .userBtn { display: none; }
 
+    .header .userModal {
+        min-width: 220px;
+        bottom: 78px;
+        top: unset;
+        right: unset;
+        left: calc(450px - 234px);
+    }
+
     /* Seção 4 - Histórias dos Moradores */
 
     #realStoriesSection .mainStoriesBox {
@@ -807,6 +1021,15 @@ p { font-size: 20px; }
     }
 
     #realStoriesSection .content { padding: 0; }
+
+    /* Seção 5 - Feedback dos Usuários */
+
+    #feedbackSection { padding: 60px 5%; }
+
+    #feedbackSection .carouselBox .userInfo img {
+        width: 180px;
+        height: 180px;
+    }
 
     /* Footer */
 
@@ -818,12 +1041,16 @@ p { font-size: 20px; }
 @media (max-width: 768px) {
     h1 { font-size: 36px; }
 
-    h2 { font-size: 32px; }
+    h2 { font-size: 32px; text-align: left !important; }
 
     /* Header */
 
     /* Menu Lateral */
     .header .sideMenu .leftSideMenu { width: 300px; }
+
+    /* Header Principal */
+
+    .header .userModal { min-width: calc(300px - 28px); left: 14px; }
 
     /* Seção 1 - Principal */
 
@@ -864,6 +1091,16 @@ p { font-size: 20px; }
     /* Seção 4 - Histórias dos Moradores */
 
     #realStoriesSection h2 { text-align: left; }
+
+    /* Seção 5 - Feedback dos Usuários */
+
+    #feedbackSection { padding: 30px 5%; }
+
+    #feedbackSection .carouselBox {
+        flex-direction: column;
+
+        padding: 14px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -876,6 +1113,19 @@ p { font-size: 20px; }
     /* Menu Lateral */
     .header .sideMenu .leftSideMenu { width: 275px; }
 
+    .header .sideMenu .exitButtonDiv button { width: 32px; height: 32px; }
+
+    .header .sideMenu .navBar { height: calc(100% - 80px); margin-top: 80px; }
+
+    /* Header Principal */
+    .header img { width: 60px; }
+
+    .header .sideMenu .exitButtonDiv { height: 80px; }
+
+    .header .sideMenu .exitButtonDiv img { width: 60px; }
+
+    .header .userModal { min-width: calc(275px - 28px); }
+
     /* Seção 1 - Principal */
 
     #mainSection {
@@ -885,8 +1135,10 @@ p { font-size: 20px; }
             rgb(30 58 138 / 0.85) 15%,
             rgb(255 106 0 / 0.25) 100%
         ),
-        url("../assets/images/HomeMainImg.png");
+        url("../assets/images/HomeMainImg.webp");
         background-position: 80% center;
+
+        margin-top: 80px;
     }
 
     #mainSection .leftSide div { flex-direction: column; }
@@ -914,6 +1166,17 @@ p { font-size: 20px; }
     #aboutSection .valuesBox .img { width: 65px; }
 
     #aboutSection .ourStory { padding: 30px 5%; }
+
+    /* Seção 5 - Feedback dos Usuários */
+
+    #feedbackSection .carouselWrapper {
+
+        grid-template-columns: auto ;
+        grid-template-areas: "container" "indicators";
+        grid-gap: 8px;
+    }
+
+    #feedbackSection .arrow { display: none; }
 
     /* Footer */
 

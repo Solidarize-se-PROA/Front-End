@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
 
     <meta name="author" content="Jéssica Santos">
     <meta name="author" content="Jhenifer Rayssa">
@@ -19,21 +21,22 @@
 
     <title>Solidarize-se | Home</title>
 </head>
+
 <body>
 
     <!--Acessibilidade Geral-->
-     <script>
-      (function(d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "yI0rffa6gk");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        (d.body || d.head).appendChild(s);
+    <script>
+        (function (d) {
+            var s = d.createElement("script");
+            s.setAttribute("data-account", "yI0rffa6gk");
+            s.setAttribute("src", "https://cdn.userway.org/widget.js");
+            (d.body || d.head).appendChild(s);
 
-        var style = d.createElement("style");
-        style.innerHTML = `.uw-sl, .uwy div {top: 95% !important;} .ulsti, .uiiw {background-color: #FF7A00 !important; border-radius: 50% !important}`
-        d.head.appendChild(style)
+            var style = d.createElement("style");
+            style.innerHTML = `.uw-sl, .uwy div {top: 95% !important;} .ulsti, .uiiw {background-color: #FF7A00 !important; border-radius: 50% !important}`
+            d.head.appendChild(style)
 
-      })(document)
+        })(document)
     </script>
 
 
@@ -66,8 +69,8 @@
 
                     <div class="userOptions">
                         <a href="#" class="doarBtn">Doar Agora</a>
-                        <button class="userBtn">
-                            <img src="./assets/images/LoginImg.png" alt="Imagem do Usuário">
+                        <button class="userBtn" aria-label="Ver meu perfil" title="Ver meu perfil">
+                            <img src="./assets/icons/UserIcon.svg" alt="Imagem do Usuário">
                         </button>
                     </div>
                 </nav>
@@ -75,7 +78,7 @@
 
             <div class="rightSideMenu" id="overlay"></div>
         </div>
-        
+
         <!--Header - Itens Principais-->
 
         <img src="./assets/images/Solidarize-Se-Logo.png" alt="Logo - Solidarize-Se">
@@ -93,13 +96,41 @@
 
         <div class="rightSide">
             <a href="#" class="doarBtn">Doar Agora</a>
-            <button class="userBtn">
-                <img src="./assets/images/LoginImg.png" alt="Imagem do Usuário">
+            <button class="userBtn" aria-label="Ver meu perfil" id="userBtn" title="Ver meu perfil">
+                <img src="./assets/icons/UserIcon.svg" alt="Imagem do Usuário">
             </button>
 
-            <button class="burgerMenu" id="openMenuBtn">
+            <button class="burgerMenu" id="openMenuBtn" aria-label="Abrir menu lateral">
                 <img src="./assets/icons/BurgerMenuIcon.svg" alt="Ícone do Menu Hambúrguer">
             </button>
+        </div>
+
+        <div class="userModal">
+            <ul>
+                <li>
+                    <a href="#"><img src="./assets/icons/UserIcon.svg" alt="Imagem do Usuário">Meu perfil</a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#"><img src="./assets/icons/GiftIcon.svg" alt="Ícone de doações">Minhas doações</a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#"><img src="./assets/icons/HandshakesIcon.svg" alt="Ícone de voluntariado">Voluntariado</a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#"><img src="./assets/icons/SettingsIcon.svg" alt="Ícone de configurações">Configurações</a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#"><img src="./assets/icons/QuestionIcon.svg" alt="Ícone de ajuda ou suporte">Ajuda / Suporte</a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#"><img src="./assets/icons/ExitIcon.svg" alt="Ícone de sair da conta">Sair da conta</a>
+                </li>
+            </ul>
         </div>
     </header>
 
@@ -114,7 +145,8 @@
                     Compartilhe <span class="colouredText">solidariedade</span>
                 </h1>
 
-                <h3>O <span class="colouredText">Solidarize-se</span> conecta doadores, voluntários e projetos sociais para levar alimento, roupas e apoio a quem mais precisa.</h3>
+                <h3>O <span class="colouredText">Solidarize-se</span> conecta doadores, voluntários e projetos sociais
+                    para levar alimento, roupas e apoio a quem mais precisa.</h3>
 
                 <div>
                     <a href="#" class="doarBtn">🤍 DOAR AGORA</a>
@@ -128,7 +160,10 @@
         <section id="aboutSection">
             <div class="topAbout">
                 <h2>Sobre Nós</h2>
-                <p>O Solidarize-se é uma ONG dedicada a ajudar pessoas em situação de rua. Nosso projeto nasceu do desejo de fazer a diferença, levando dignidade, apoio e esperança para aqueles que mais precisam.</p>
+                <p>
+                    O Solidarize-se é uma ONG dedicada a ajudar pessoas em situação de rua.
+                    Nosso projeto nasceu do desejo de fazer a diferença, levando dignidade, apoio e esperança para aqueles que mais precisam.
+                </p>
             </div>
 
             <div class="ourMission">
@@ -138,7 +173,10 @@
                 </div>
 
                 <div class="missionContent">
-                    <p>Nossa Missão é oferecer suporte essencial às pessoas em situação de rua, proporcionando acesso a alimentos, roupas, cuidados básicos e atendimento psicológico.<br/><br/>Acreditamos que pequenos gestos de solidariedade podem transformar vidas.</p>
+                    <p>
+                        Nossa Missão é oferecer suporte essencial às pessoas em situação de rua, proporcionando acesso a alimentos, roupas, cuidados básicos e atendimento psicológico.<br /><br />
+                        Acreditamos que pequenos gestos de solidariedade podem transformar vidas.
+                    </p>
 
                     <div class="valuesDiv">
                         <div class="solidariedade valuesBox">
@@ -171,18 +209,20 @@
                         </p>
                     </div>
                     <div class="rightSide">
-                        <img src="./assets/images/OurStoryImg.png" alt="Imagem animada representando voluntários ajudando um morador de rua">
+                        <img src="./assets/images/OurStoryImg.png" alt="Imagem estilizada representando voluntários ajudando um morador de rua">
                     </div>
                 </div>
             </div>
         </section>
 
         <!--Seção 3 - Como Você Pode Ajudar-->
-        
+
         <section id="supportSection">
             <div class="topSupport">
                 <h2>Como você pode ajudar</h2>
-                <p>Existem várias formas de apoiar nossa missão. Sua <span>contribuição</span>, seja por meio de <span>doações</span>, <span>voluntariado</span> ou <span>compartilhamento</span>, ajuda a transformar vidas e levar dignidade às pessoas em situação de rua.</p>
+                <p>
+                    Existem várias formas de apoiar nossa missão. Sua <span>contribuição</span>, seja por meio de <span>doações</span>, <span>voluntariado</span> ou <span>compartilhamento</span>, ajuda a transformar vidas e levar dignidade às pessoas em situação de rua.
+                </p>
             </div>
 
             <div class="supportDiv">
@@ -245,7 +285,7 @@
                         </p>
                     </div>
                 </div>
-                 <div class="mainStoriesBox">
+                <div class="mainStoriesBox">
                     <img src="./assets/images/JoaoImg.png" alt="Imagem representando o João" class="img">
                     <div class="content">
                         <h4>João, 52 anos</h4>
@@ -259,6 +299,74 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!--Seção 5 - Feddback dos Usuários-->
+        <section id="feedbackSection">
+            <div class="carouselWrapper">
+
+                <button class="arrow left" aria-label="Slide anterior" title="Slide anterior">
+                    <img src="./assets/icons/ArrowIcon.svg" alt="Ícone de seta para a esquerda">
+                </button>
+
+                <div class="carouselContainer">
+                    <div class="carouselTrack">
+
+                        <div class="carouselBox">
+                            <div class="userInfo">
+                                <img src="./assets/images/RamonSilvaImg.jpg" alt="Imagem de Ramon Silva">
+                                <h4>Ramon Silva</h4>
+                                <div class="stars" data-rating="5"></div>
+                            </div>
+                            <div class="userText">
+                                <p>
+                                    Conheci o Solidarize-se recentemente e fiquei impressionado com a proposta e organização.
+                                    O site é claro e facilita doações e voluntariado. Destaco o impacto social da iniciativa, que transforma empatia em ações concretas.
+                                    Parabéns à equipe, continuarei apoiando o projeto.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carouselBox">
+                            <div class="userInfo">
+                                <img src="./assets/images/FernandaMatosImg.jpg" alt="Imagem de Fernanda Matos">
+                                <h4>Fernanda Matos</h4>
+                                <div class="stars" data-rating="5"></div>
+                            </div>
+                            <div class="userText">
+                                <p>
+                                    Descobri o Solidarize-se através de uma amiga e fiquei encantada com a facilidade de uso da plataforma.
+                                    É inspirador ver como pequenas ações podem gerar grandes mudanças na vida de tantas pessoas.
+                                    A organização do site transmite confiança e torna todo o processo muito simples.
+                                    Com certeza continuarei contribuindo e incentivando outras pessoas a participarem.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carouselBox">
+                            <div class="userInfo">
+                                <img src="./assets/images/RogerioLealImg.jpg" alt="Imagem de Rogério Leal">
+                                <h4>Rogério Leal</h4>
+                                <div class="stars" data-rating="5"></div>
+                            </div>
+                            <div class="userText">
+                                <p>
+                                    Utilizo o Solidarize-se há algum tempo e posso dizer que a experiência tem sido extremamente positiva.
+                                    A plataforma conecta pessoas que realmente querem ajudar com causas que fazem a diferença.
+                                    Gosto muito da transparência e da praticidade oferecida em cada etapa.
+                                    É gratificante saber que, com poucos cliques, posso contribuir para algo maior.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="arrow right" aria-label="Próximo slide" title="Próximo Slide">
+                    <img src="./assets/icons/ArrowIcon.svg" alt="Ícone de seta para a direita">
+                </button>
+
+                <div class="indicators"></div>
             </div>
         </section>
     </main>
@@ -299,4 +407,5 @@
         <h5>Solidarize-se © 2026 - Todos os direitos reservados</h5>
     </footer>
 </body>
+
 </html>
