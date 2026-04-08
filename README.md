@@ -12,7 +12,7 @@
 
 [![Licença: CC BY-NC-ND 4.0](https://img.shields.io/badge/Licença-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-[<img src="./assets/SolidarizeSePage.jpg" alt="Solidarize-se website" width="800px" />](./assets/SolidarizeSePage.jpg)
+[<img src="./telas_Matheus_Junior/assets/SolidarizeSePage.jpg" alt="Solidarize-se website" width="800px" />](./assets/SolidarizeSePage.jpg)
 
 ## 📌 Sobre
 
@@ -50,7 +50,7 @@ Esse projeto incorpora imagens e ícones das seguintes fontes:
 <table>
   <tr>
     <td align="center">
-        <img src="./assets/images/MatheusMatosImg.jpg" width="120px" alt="Retrato de Matheus Matos"/><br>
+        <img src="./telas_Matheus_Junior/assets/images/MatheusMatosImg.jpg" width="120px" alt="Retrato de Matheus Matos"/><br>
         <sub>
           <b>Matheus Matos</b>
           <br />
@@ -58,7 +58,7 @@ Esse projeto incorpora imagens e ícones das seguintes fontes:
         </sub>
     </td>
     <td align="center">
-        <img src="./assets/images/MatheusJuniorImg.jpg" width="120px" alt="Retrato de Matheus Júnior"/><br>
+        <img src="./telas_Matheus_Junior/assets/images/MatheusJuniorImg.jpg" width="120px" alt="Retrato de Matheus Júnior"/><br>
         <sub>
           <b>Matheus Júnior</b>
           <br />
@@ -66,7 +66,7 @@ Esse projeto incorpora imagens e ícones das seguintes fontes:
         </sub>
     </td>
     <td align="center">
-        <img src="./assets/images/RafaelRochaImg.jpg" width="120px" alt="Retrato de Rafael Rocha"/><br>
+        <img src="./telas_Matheus_Junior/assets/images/RafaelRochaImg.jpg" width="120px" alt="Retrato de Rafael Rocha"/><br>
         <sub>
           <b>Rafael Rocha</b>
           <br />
@@ -74,7 +74,7 @@ Esse projeto incorpora imagens e ícones das seguintes fontes:
         </sub>
     </td>
     <td align="center">
-        <img src="./assets/images/SamuelSousaImg.jpg" width="120px" alt="Retrato de Samuel Sousa"/><br>
+        <img src="./telas_Matheus_Junior/assets/images/SamuelSousaImg.jpg" width="120px" alt="Retrato de Samuel Sousa"/><br>
         <sub>
           <b>Samuel Sousa</b>
           <br />
@@ -82,7 +82,7 @@ Esse projeto incorpora imagens e ícones das seguintes fontes:
         </sub>
     </td>
     <td align="center">
-        <img src="./assets/images/JessicaSantosImg.jpg" width="120px" alt="Retrato de Jéssica Santos"/><br>
+        <img src="./telas_Matheus_Junior/assets/images/JessicaSantosImg.jpg" width="120px" alt="Retrato de Jéssica Santos"/><br>
         <sub>
           <b>Jéssica Santos</b>
           <br />
@@ -90,7 +90,7 @@ Esse projeto incorpora imagens e ícones das seguintes fontes:
         </sub>
     </td>
     <td align="center">
-        <img src="./assets/images/JheniferRayssaImg.jpg" width="120px" alt="Retrato de Jhenifer Rayssa"/><br>
+        <img src="./telas_Matheus_Junior/assets/images/JheniferRayssaImg.jpg" width="120px" alt="Retrato de Jhenifer Rayssa"/><br>
         <sub>
           <b>Jhenifer Rayssa</b>
           <br />
@@ -98,7 +98,7 @@ Esse projeto incorpora imagens e ícones das seguintes fontes:
         </sub>
     </td>
     <td align="center">
-        <img src="./assets/images/StephanieAlmeidaImg.jpg" width="120px" alt="Retrato de Stephanie Almeida"/><br>
+        <img src="./telas_Matheus_Junior/assets/images/StephanieAlmeidaImg.jpg" width="120px" alt="Retrato de Stephanie Almeida"/><br>
         <sub>
           <b>Stephanie Almeida</b>
           <br />
@@ -106,7 +106,7 @@ Esse projeto incorpora imagens e ícones das seguintes fontes:
         </sub>
     </td>
     <td align="center">
-        <img src="./assets/images/YasminValeImg.jpg" width="120px" alt="Retrato de Yasmin Vale"/><br>
+        <img src="./telas_Matheus_Junior/assets/images/YasminValeImg.jpg" width="120px" alt="Retrato de Yasmin Vale"/><br>
         <sub>
           <b>Yasmin Vale</b>
           <br />
