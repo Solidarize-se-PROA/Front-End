@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form-Voluntário</title>
+  <link rel="stylesheet" href="./css/formvoluntario.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <p class="voltar">
+    <a href="/index.html">
+      <i class="fa-solid fa-arrow-left-long"></i> VOLTAR AO INÍCIO
+    </a>
+  </p>
+
+  <div class="content">
+    <h1>Junte-se a nós como um voluntário</h1>
+    <p>
+      Obrigado por querer fazer parte dessa causa. <br />
+      Como voluntário do <b>Solidarize-se</b>, você pode ajudar na
+      distribuição de alimentos, doação de roupas e apoio às pessoas em
+      situação de rua.
+    </p>
+    <h4>
+      Preencha o formulário abaixo para participar das nossas ações
+      solidárias.
+    </h4>
+
+    <div class="form">
+      <form action="/telas_Matheus_Matos/Confirmacao_Voluntariado/index.html">
+        <div class="inserir">
+          <input type="text" name="nome" id="" placeholder="Nome Completo" />
+          <input type="email" name="email" id="" placeholder="E-mail" />
+          <input type="tel" name="telefone" id="" placeholder="Telefone" />
+          <input type="text" name="cpf" id="" placeholder="CPF" />
+        </div>
+        <div class="pa">Como deseja ajudar?</div>
+        <div class="servico">
+          <label class="container">Distribuir alimentos
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Organizar doações
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Campanhas de arrecadação
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Eventos especiais
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="pa">Disponibilidade</div>
+        <div class="dias">
+          <label class="container2">Durante a semana
+            <input type="checkbox">
+            <span class="checkmark2"></span>
+          </label>
+
+          <label class="container2">Fim de semana
+            <input type="checkbox">
+            <span class="checkmark2"></span>
+          </label>
+        </div>
+        <div class="mensagem">
+          <label for="mensagem">Por que você quer ser voluntário? (opcional)</label><br />
+          <textarea type="text" name="mensagem" id="mensagem" placeholder="Mensagem" rows="10" cols="50"></textarea>
+        </div>
+        <div class="termoenvio">
+          <div class="termos">
+            <label class="termos">Li e estou de acordo com os
+              <a href="/telas_Matheus_Matos/termo_de_Serviço_PDC/index.html"><span>Termos de Serviço</span></a>
+              <input type="checkbox">
+              <span class="checkmark3"></span>
+            </label>
+          </div>
+          <button class="enviar">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

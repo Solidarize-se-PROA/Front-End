@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./src/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <title>Ponto de coleta</title>
+</head>
+
+<body>
+    <a href="/index.html" class="voltar"><span>&#8617;</span>VOLTAR AO INICIO</a>
+
+    <div class="topo">
+        <h1>Pontos de Coleta</h1>
+        <p>Aqui você encontra os locais onde é possível entregar <span>doações de roupas, cobertores e alimentos não perecíveis</span>. Sua contribuição ajuda diretamente pessoas em situações de rua.</p>
+
+        <div class="container">
+            <div id="mapa"></div>
+
+            <div class="conteudo-flex">
+                <div class="lugares">
+                    <div class="item-endereco">
+                        <strong><i class="bxf bx-location"></i>Ponto de Coleta Proa</strong>
+                        <p>Av. Brig. Faria Lima, 4055 - 4º andar - Itaim Bibi, São Paulo - SP</p>
+                    </div>
+
+                    <div class="item-endereco">
+                        <strong><i class="bxf bx-location"></i>Ponto de Coleta Serasa</strong>
+                        <p>Av. Pres. Juscelino Kubitschek, 2041 - Vila Nova Conceição, São Paulo - SP</p>
+                    </div>
+
+                    <div class="item-endereco">
+                        <strong><i class="bx bx-location"></i>Ponto de Coleta Igreja Moema</strong>
+                        <p>Praça Nossa Sra. Aparecida, s/n - Indianópolis, São Paulo - SP</p>
+                    </div>
+
+                </div>
+                <div class="infoDoacoes">
+                    <p class="info1">O que pode ser doado</p>
+                    <ul class="itensDoacoes">
+                        <li>Roupas em bom estado</li>
+                        <li>Cobertores</li>
+                        <li>Alimentos não perecíveis</li>
+                        <li>Kits de higiene</li>
+                    </ul>
+                    <div class="img">
+                        <img src="./img/img-itensDoacao.png" alt="img">
+                    </div>
+                    <p class="info2">
+                        Pedimos que todas as<br>doações estejam limpas e<br>em boas condições de uso,<br>para garantir dignidade<br>às pessoas atendidas.
+                    </p>
+                    <a href="../cadastro_Ponto_de_coleta/index.html">
+                        <button>Quero ser um ponto de coleta</button>
+                    </a>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+</body>
+
+</html>

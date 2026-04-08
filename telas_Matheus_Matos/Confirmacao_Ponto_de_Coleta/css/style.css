@@ -1,0 +1,98 @@
+body{
+    background: linear-gradient(to bottom right, #2f4bbc 0%, #3C5AA6 40%, #FF6A00 100%);
+    background-size: cover;
+    min-height: 100vh;
+    font-family: "poppins", arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoVoltar{
+    position: absolute;
+    top: 20px;
+    left: 20px;    
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoVoltar img{
+    width: 60px;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,255,255,0.1);
+    width: 100%;
+    max-width: 390px;
+    padding: 60px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: solid 1px;
+    border-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(100px);
+}
+
+.circulo {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);    
+    background-color: #28a745;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+
+.conteudo {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 35px;
+    border-radius: 8px;
+    color: #5C427E;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.titulo{
+    font-weight: bold;
+    color: #5C427E;
+    font-size: 20px;
+}
+
+.info{
+    color: black;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.info2{
+    font-weight: bold;
+    color: #1E3A8A;
+    font-size: 12px;
+}
+
+.btnVoltar{
+    background: linear-gradient(to left, rgb(221, 93, 1)0%, rgba(255, 106, 0, 0.774)100%);
+    color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 18px;
+    font-weight: bold;
+    font-size: 15px;
+}

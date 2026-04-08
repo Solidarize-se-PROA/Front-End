@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./src/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Cadastro Ponto de Coleta</title>
+</head>
+<body>
+    <a href="/index.html" class="voltar"><span>&#8617;</span>VOLTAR AO INICIO</a>
+    <div class="container">
+        <h1>Cadastrar pontos de coleta</h1>
+
+        <div class="campo">
+            <label>Nome do local:</label>
+            <input type="text" placeholder="Digite o nome do local...">
+        </div>
+        <div class="campo">
+            <label>Responsável:</label>
+            <input type="text" placeholder="Nome do responsável...">
+        </div>
+        <div class="campo">
+            <label>Telefone ou WhatsApp:</label>
+            <input type="number" placeholder="(00) 00000-0000">
+        </div>
+        <div class="campo">
+            <label>Endereço:</label>
+            <input type="text" placeholder="Rua, número, bairro, cidade...">
+        </div>
+        <div class="campo">
+            <label>Horário de funcionamento:</label>
+            <div class="horario">
+                <input type="time" name="abre">
+                <span>até</span>
+                <input type="time" name="fecha">
+            </div>
+        </div>
+        <div class="campo">
+            <label>Tipos de doações aceitas:</label>
+            <div class="checkbox">
+                <label><input type= "checkbox"> Roupas</label>
+                <label><input type= "checkbox"> Cobertores</label>
+                <label><input type= "checkbox"> Alimentos</label>
+                <label><input type= "checkbox"> Kits de higiene</label>
+            </div>
+        </div>
+        
+        <div class="termos">
+            <label class="termos">Li e estou de acordo com os
+              <a href="/telas_Matheus_Matos/termo_de_Serviço_VTD/"><span>Termos de Serviço</span></a>
+              <input type="checkbox">
+              <span class="checkmark3"></span>
+            </label>
+        </div>
+
+        <a href="../Confirmacao_Ponto_de_Coleta/index.html">
+            <button class="btnCadastrarColeta">Cadastrar ponto de coleta</button>
+        </a>
+
+    </div>
+</body>
+</html>

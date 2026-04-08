@@ -651,7 +651,7 @@ p { font-size: 20px; }
     );
 }
 
-#supportSection .compartilhar a {
+#supportSection .cPonto a {
     background: linear-gradient(
         to bottom,
         #8DAC7C 8%,
