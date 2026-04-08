@@ -235,10 +235,10 @@ form {
 
 /* TERMOS E SUBMIT */
 .termos {
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
-  padding-left: 30px;
   margin-bottom: 12px;
+  padding: 5px;
   font-weight: bold;
   color: black;
 }
@@ -255,29 +255,9 @@ form {
 
 .termos input {
   position: relative;
-  opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.checkmark3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #eee;
-  border-radius: 5px;
-  border: 2px solid white;
-}
-
-.termos:hover input ~ .checkmark3 {
-  background-color: #ccc;
-}
-
-.termos input:checked ~ .checkmark3 {
-  background-color: #FF7A00;
+  height: 15px;
+  width: 15px;
 }
 
 .termoenvio {
